@@ -1,0 +1,12 @@
+{% extends "portal/emp_index.html" %}
+{% block content %}
+<br>
+
+<h3>{{res.med.count}}</h3>
+
+{% for item in res.med %}
+
+<h5>{{item.procedure_date}}</h5>
+{% endfor %}
+
+{% endblock content %}

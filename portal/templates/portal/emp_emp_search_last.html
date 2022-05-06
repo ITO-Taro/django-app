@@ -1,0 +1,26 @@
+{% extends "portal/index.html" %}
+{% block content %}
+
+<center>
+    <br>
+    <div style="margin-left: 0;">
+    <h4>Enter a complete employee ID</h4><br>
+    <h5>Examples</h5>
+            <li>EE-0015402</li>
+            <li>EE-0015420</li>
+            <li>EE-0015426</li>
+    </div>
+    <br>
+
+    <div>
+        <form method="post" action="res/"> {% csrf_token %}
+            <label for="emp_id">Enter Your Complete Employee ID</label>
+            <input type="text" name="emp_id"/>
+            <input type="submit">
+        </form>
+    </div>
+    <div style="color:red; font-size:30px">{{message}}</div>
+    
+    <h5>*results limited to first {{search_limit}} matches</h5>
+</center>
+{% endblock content %}

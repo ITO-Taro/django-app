@@ -1,0 +1,63 @@
+{% extends "portal/index.html" %}
+{% block content %}
+<style>
+    table, thead, tbody, tr, td, th {
+        border: 1px solid white;
+        color:white;   
+    }
+</style>
+<center>
+    <table  style="width:800px;">
+        <thead>
+            <tr>
+            <th rowspan="2"><center>Latitude</center></th>
+            <th rowspan="2"><center>Logitude</center></th>
+            <th rowspan="2"><center>Date</center></th>
+            <th rowspan="2"><center>Sunrise</center></th>
+            <th rowspan="2"><center>Sunset</center></th>
+            <th rowspan="2"><center>High</center></th>
+            <th rowspan="2"><center>Low</center></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td ><center>{{data.lat}}</center></td>
+            <td ><center>{{data.lon}}</center></td>
+            <td ><center>{{data.today_date}}</center></td>
+            <td ><center>{{data.current.sunrise}}</center></td>
+            <td ><center>{{data.current.sunset}}</center></td>
+            <td ><center>{{data.today_max}}</center></td>
+            <td ><center>{{data.today_min}}</center></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <div><img src={{data.chart_url}} alt=""></div>
+    <br><br>
+    <table style='width:800px'>
+        <thead>
+            <tr>
+            <th rowspan="2"><center>Time</center></th>
+            <th rowspan="2"><center>Temerature</center></th>
+            <th rowspan="2"><center>Pressure</center></th>
+            <th rowspan="2"><center>Humidity</center></th>
+            <th rowspan="2"><center>Wind Speed</center></th>
+            <th rowspan="2"><center>Wind Degree</center></th>
+            </tr>
+        </thead>
+        {% for item in data.hourly %}
+        <tbody>
+            <tr>
+            <td><center>{{item.dt}}</center></td>
+            <td><center>{{item.temp}}</center></td>
+            <td><center>{{item.pressure}}</center></td>
+            <td><center>{{item.humidity}}</center></td>
+            <td><center>{{item.wind_speed}}</center></td>
+            <td><center>{{item.wind_deg}}</center></td>
+            </tr>
+        </tbody>
+        {% endfor  %}
+    </table>
+    <br>
+</center>
+{% endblock content %}

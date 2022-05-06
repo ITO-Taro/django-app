@@ -1,0 +1,22 @@
+{% extends "portal/landing.html" %}
+{% block content %}
+
+<div><br>
+    <center>
+        <h5 style="color: red;">{{message}}</h5>
+        <br>
+        <div>
+            <form method="post" action=""> {% csrf_token %}
+                <label for="user_id">Enter Employee ID</label>
+                <input type="text" name="user_id"/>
+                <br><br>
+                <label for="password">Enter User Password</label>
+                <input type="text" name="password"/>
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </center>
+</div>
+
+{% endblock content %}

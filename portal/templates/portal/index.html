@@ -1,0 +1,25 @@
+{% extends "portal/landing.html" %}
+{% block content %}
+<style>
+    #index-button{
+        background-color: rgba(0,0,0,0.1);
+    }
+    #index-link{
+        color: white;
+        text-decoration: none;
+    }
+    #links {
+        margin-top: 5%;
+    }
+</style>
+<div id="links">
+    <center>
+        <button id="index-button"><a id="index-link" href="/portal/emp-login">Employee Portal</a></button>
+        <br><br><br>
+        <button id="index-button"><a id="index-link" href="/portal/hr-login">HR Portal</a></button>
+        <br><br><br>
+        <button id="index-button"><a id="index-link" href="/portal/weather-forecast">Weather Forecast</a></button>
+    </center>
+</div>
+
+{% endblock content %}

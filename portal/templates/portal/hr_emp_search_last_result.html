@@ -1,0 +1,40 @@
+{% extends "portal/index.html" %}
+{% block content %}
+<br>
+
+<center>
+
+<h3>{{total_match}} matches found. Showing first {{search_limit}}</h3>
+<table style='border: 0.5px solid white; width:750px'>
+    <thead style="color:white; font-size: 12px;">
+        <tr>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>Employee ID</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>Title</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>Gender</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>LAST NAME</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>First Name</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>Salary</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>City</center></th>
+        <th style='border: 0.5px solid white;', rowspan="2"><center>State</center></th>
+        </tr>
+    </thead>
+    <h3>{{result}}</h3>
+    <br>
+    {% for emp in res %}
+    <tbody style="color:white; font-size: 11px;">
+        <tr>
+        <td style='border: 0.5px solid white;'><center>{{emp.emp_id}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.title}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.gender}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.last_name}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.first_name}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.salary}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.city}}</center></td>
+        <td style='border: 0.5px solid white;'><center>{{emp.state}}</center></td>
+        </tr>
+    </tbody>
+    {% endfor %}
+    </table>
+    <br><br>
+</center>
+{% endblock content %}

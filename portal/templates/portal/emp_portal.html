@@ -1,0 +1,65 @@
+{% extends "portal/emp_index.html" %}
+{% block content %}
+<style>
+    table, thead, tbody, tr, td, th {
+        border: 1px solid white;
+        color:white;   
+    }
+</style>
+<br>
+<center>
+<h3>Employee Information</h3>
+<table style='width:750px'>
+    <thead>
+        <tr>
+        <th rowspan="2"><center>Employee ID</center></th>
+        <th rowspan="2"><center>Title</center></th>
+        <th rowspan="2"><center>Gender</center></th>
+        <th rowspan="2"><center>LAST NAME</center></th>
+        <th rowspan="2"><center>First Name</center></th>
+        <th rowspan="2"><center>Salary</center></th>
+        <th rowspan="2"><center>City</center></th>
+        <th rowspan="2"><center>State</center></th>
+        </tr>
+    </thead>
+    <br>
+    <tbody>
+        <tr>
+        <td ><center>{{res.emp.emp_id}}</center></td>
+        <td ><center>{{res.emp.title}}</center></td>
+        <td ><center>{{res.emp.gender}}</center></td>
+        <td ><center>{{res.emp.last_name}}</center></td>
+        <td ><center>{{res.emp.first_name}}</center></td>
+        <td ><center>{{res.emp.salary}}</center></td>
+        <td ><center>{{res.emp.city}}</center></td>
+        <td ><center>{{res.emp.state}}</center></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<h3>Medical Records</h3>
+<table style='width:750px'>
+    <thead>
+        <tr>
+        <th rowspan="2"><center>Procedure Date</center></th>
+        <th rowspan="2"><center>Medical Code</center></th>
+        <th rowspan="2"><center>Description</center></th>
+        <th rowspan="2"><center>Price</center></th>
+        <th rowspan="2"><center>Transaction ID</center></th>
+        </tr>
+    </thead>
+    <br>
+    {% for k, v in res.med.items %}
+    <tbody>
+        <tr>
+        <td ><center>{{v.date}}</center></td>
+        <td ><center>{{v.code}}</center></td>
+        <td ><center>{{v.decsript}}</center></td>
+        <td ><center>{{v.price}}</center></td>
+        <td ><center>{{v.t_id}}</center></td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+</center>
+{% endblock content %}

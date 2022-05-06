@@ -1,0 +1,26 @@
+{% extends "portal/hr_portal.html" %}
+{% block content %}
+
+<center>
+    <br>
+    <div style="margin-left: 0;">
+    <h4>Enter partial or complete employee last name  that is 2 characters or more</h4><br>
+    <h5>Examples</h5>
+            <li>Smith</li>
+            <li>smi</li>
+            <li>willia</li>
+    </div>
+    <br>
+
+    <div>
+        <form method="post" action="res/"> {% csrf_token %}
+            <label for="key_word">Enter Employee Last Name</label>
+            <input type="text" name="key_word"/>
+            <input type="submit">
+        </form>
+    </div>
+    <div style="color:red; font-size:30px">{{message}}</div>
+    
+    <h5>*results limited to first {{search_limit}} matches</h5>
+</center>
+{% endblock content %}
