@@ -1,2 +1,2 @@
-web: gunicorn recipe_app.wsgi
+web: gunicorn portal.wsgi
 release: python manage.py migrate
