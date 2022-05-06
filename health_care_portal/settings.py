@@ -80,7 +80,11 @@ WSGI_APPLICATION = 'health_care_portal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': BASE_DIR / 'health-care-portal.db',
+        'NAME': 'ddvdr6logjj1ks',
+        'USER': 'qoyjtzxtprqhiv',
+        'PASSWORD': 'e9ce3533d527da2628b94ea28f37f8ba2203881ddb00745e27981604216d24e0',
+        'HOST': 'ec2-35-168-194-15.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
