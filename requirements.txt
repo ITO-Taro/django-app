@@ -109,5 +109,6 @@ waitress==2.1.1
 wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==2.0.2
+whitenoise==6.0.0
 widgetsnbextension==3.5.1
 wrapt==1.13.3
