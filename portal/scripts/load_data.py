@@ -3,10 +3,12 @@ from portal.models import *
 from sqlalchemy import create_engine
 import pandas as pd
 import string
+import psycopg2
 
 PATH = "./data/"
 
-DB = "sqlite:///health-care-portal.db"
+DB = "sqlite:///portal.db"
+# conn = psycopg2.connect("host=localhost dbname=portal_db user=postgres")
 
 MEDICAL_CODE = "2021_medical_codes.xlsx"
 

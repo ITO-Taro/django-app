@@ -82,15 +82,19 @@ WSGI_APPLICATION = 'health_care_portal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddvdr6logjj1ks',
-        'USER': 'qoyjtzxtprqhiv',
-        'PASSWORD': 'e9ce3533d527da2628b94ea28f37f8ba2203881ddb00745e27981604216d24e0',
-        'HOST': 'ec2-35-168-194-15.compute-1.amazonaws.com',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'portal.db',
+        # 'NAME': 'ddvdr6logjj1ks',
+        # 'USER': 'qoyjtzxtprqhiv',
+        # 'PASSWORD': 'e9ce3533d527da2628b94ea28f37f8ba2203881ddb00745e27981604216d24e0',
+        # 'HOST': 'ec2-35-168-194-15.compute-1.amazonaws.com',
+        # 'PORT': '5432',
+        # 'URL': 'postgres://qoyjtzxtprqhiv:e9ce3533d527da2628b94ea28f37f8ba2203881ddb00745e27981604216d24e0@ec2-35-168-194-15.compute-1.amazonaws.com:5432/ddvdr6logjj1ks',
+        # 'Heroku CLI': 'heroku pg:psql postgresql-closed-52007 --app django-db-api-app',
     }
 }
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 # Password validation
