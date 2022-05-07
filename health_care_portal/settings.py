@@ -27,7 +27,7 @@ WEATHER_TOKEN = "15c2357e8154d5f7e3e2e0f7c90d42d8"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-db-api-app.herokuapp.com' ]
 
 
 # Application definition
