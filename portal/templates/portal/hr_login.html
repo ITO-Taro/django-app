@@ -1,14 +1,26 @@
 {% extends "portal/landing.html" %}
 {% block content %}
-
+<style>
+    input {
+        background-color:rgba(0,0,0,0.1);
+    }
+    input:focus, ::placeholder, input {
+        color: white;
+    }
+    ::placeholder {
+    opacity: 0.3;
+    font-size: 13px;
+    }
+</style>
 <div><br>
     <center>
-        <h5 style="color: red;">{{message}}</h5>
-        <br>
-        <div>
+    <h5 style="color: red;">{{message}}</h5>
+    <br>
+    <div id="hr-login-forn">
+        <div class="row" style="margin:0 40% 20% 0; text-align:right;">
             <form method="post" action=""> {% csrf_token %}
                 <label for="user_id">Enter Employee ID</label>
-                <input type="text" name="user_id"/>
+                <input type="text" name="user_id" placeholder="HR employee ID...hr00.."/>
                 <br><br>
                 <label for="password">Enter User Password</label>
                 <input type="text" name="password"/>
@@ -16,6 +28,7 @@
                 <input type="submit">
             </form>
         </div>
+    </div>
     </center>
 </div>
 

@@ -1,9 +1,5 @@
-import datetime
-from tabnanny import verbose
-
 from django.db import models
 from django.utils import timezone
-from .management.commands.load_data import Command as com
 
 
 
